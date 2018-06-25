@@ -16,8 +16,6 @@
 	<div class="container">
 		<h1>Demo</h1>
 		<div class="container unauthenticated">
-	    	With Box: <a href="/login">click here</a>
-	    	<br>
 	    	<button class="btn btn-primary" onclick="location.href='/login'">Login</button>
 		</div>
 		<div class="container authenticated" style="display:none">
@@ -28,9 +26,10 @@
 	</div>
     <script type="text/javascript">
 		$.get("/user", function(data) {
-			$("#user").html(data.userAuthentication.details.name);
-			$(".unauthenticated").hide()
-			$(".authenticated").show()
+			var user_details = data.userAuthentication.details;
+			$("#user").html(user_details.name);
+			$(".unauthenticated").hide();
+			$(".authenticated").show();
 		});
 		var logout = function() {
 			$.post("/logout", function() {

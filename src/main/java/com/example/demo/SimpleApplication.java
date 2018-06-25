@@ -32,7 +32,7 @@ public class SimpleApplication extends WebSecurityConfigurerAdapter {
 	      .authorizeRequests()
 	        .antMatchers("/", "/login**", "/webjars/**", "/error**")
 	        .permitAll()
-	      .anyRequest()
+	        .anyRequest()
 	        .authenticated()
 	        .and().logout().logoutSuccessUrl("/").permitAll()
 	        .and().csrf().csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse());
