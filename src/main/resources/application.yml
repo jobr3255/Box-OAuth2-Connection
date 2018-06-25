@@ -1,0 +1,11 @@
+security:
+  oauth2:
+    client:
+      clientId: rekbftn97gk0j2f13lwm9ie27yprogcr
+      clientSecret: xS6nu9ftGAc2NxQJ0mcB9Ok2rD7nY3z0
+      accessTokenUri: https://www.box.com/api/oauth2/token
+      userAuthorizationUri: https://account.box.com/api/oauth2/authorize
+      authenticationScheme: query
+      clientAuthenticationScheme: form
+    resource:
+      userInfoUri: https://api.box.com/2.0/users/me
